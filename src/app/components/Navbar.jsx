@@ -8,7 +8,7 @@ const Navbar = () => {
     </>
     return (
         <div>
-            <ul>
+            <ul className='flex justify-between gap-5 p-2'>
                 {links}
             </ul>
         </div>
