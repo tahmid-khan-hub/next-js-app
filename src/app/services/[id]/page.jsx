@@ -19,7 +19,7 @@ const ServicesDetailsPage = ({ params }) => {
     },
   ];
 
-  const id = params.id;
+  const id = params?.id;
   const service = services.find((service) => service._id === id);
 
   if (!service) {
