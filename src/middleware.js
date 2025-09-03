@@ -8,7 +8,7 @@ export function middleware(request) {
   };
 
   let isServicesPage = request.nextUrl.pathname.startsWith("/services");
-  let isAdmin = dummyData.role == "admin";
+  let isAdmin = dummyData.role == "user";
 
   if (isServicesPage && !isAdmin)
     return NextResponse.redirect(new URL("/", request.url));
