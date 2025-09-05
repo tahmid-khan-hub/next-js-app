@@ -1,6 +1,10 @@
+"use client"
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const AddProductForm = () => {
+
+    const router  = useRouter();
 
     const handleSubmit = async(e) =>{
         e.preventDefault();
@@ -16,6 +20,7 @@ const AddProductForm = () => {
         })
         const result = await res.json();
         console.log(result);
+        router.push("/products");
     }
     return (
         <div>
