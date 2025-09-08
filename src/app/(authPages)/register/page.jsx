@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+import RegisterUser from "./RegisterUser";
 
 const RegisterPage = () => {
   const handleRegister = async (e) => {
@@ -9,7 +11,11 @@ const RegisterPage = () => {
     const password = form.password.value;
 
     const userData = { name, password };
-    
+
+    const data = await RegisterUser(userData);
+    console.log(data);
+    if(data) alert("successfull register");
+
   };
   return (
     <div>
