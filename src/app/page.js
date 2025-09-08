@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import LoginButton from "./components/LoginButton";
 
 export default async function Home() {
   const session = await getServerSession(authOptions);
@@ -7,6 +8,7 @@ export default async function Home() {
     <div>
       Main Content
       <p className="mt-11">From client component: </p>
+      <LoginButton></LoginButton>
     </div>
   );
 }
